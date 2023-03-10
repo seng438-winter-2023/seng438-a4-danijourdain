@@ -1,0 +1,14 @@
+/.metadata/
+*.html
+*.jar
+*.class
+*.zip
+*.DS_Store
+*.properties
+*.js
+*.css
+*.jpg
+*.lst
+*.png
+*.xml
+*.txt
