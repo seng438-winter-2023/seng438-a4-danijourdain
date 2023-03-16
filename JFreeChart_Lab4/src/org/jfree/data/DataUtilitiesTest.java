@@ -462,6 +462,59 @@ public class DataUtilitiesTest {
 					exception.getClass());
 		}
 	}
+	
+	/***
+	 * NEW FOR ASSIGNMENT 4
+	 * This test will test calculateColumnTotal by using a null Values2D.
+	 * Expected output is IllegalArgumentException.class.
+	 */
+	@Test
+	public void calculateColumnTotalForNullValuesWithValidRows() {
+		int[] validRows = null;
+		values = null;
+		try {
+			DataUtilities.calculateColumnTotal(values, 0, validRows);
+			fail("An exception should be thrown!");
+		} catch (Exception exception) {
+			assertEquals("The exception thrown type is IllegalArgumentException", IllegalArgumentException.class,
+					exception.getClass());
+		}
+	}
+	
+	/***
+	 * NEW FOR ASSIGNMENT 4
+	 * This test will test calculateRowTotal by using a null Values2D.
+	 * Expected output is IllegalArgumentException.class.
+	 */
+	@Test
+	public void calculateRowTotalForNullValuesWithValidCols() {
+		int[] validCols = null;
+		values = null;
+		try {
+			DataUtilities.calculateRowTotal(values, 0, validCols);
+			fail("An exception should be thrown!");
+		} catch (Exception exception) {
+			assertEquals("The exception thrown type is IllegalArgumentException", IllegalArgumentException.class,
+					exception.getClass());
+		}
+	}
+	
+	/***
+	 * NEW FOR ASSIGNMENT 4
+	 * This test will test getCumulativePercentages by using a null value.
+	 * Expected output is IllegalArgumentException.class.
+	 */
+	@Test
+	public void getCumulativePercentagesNullCheck() {
+		keyedValuesList = null;
+		try {
+			DataUtilities.getCumulativePercentages(keyedValuesList);
+			fail("An exception should be thrown!");
+		} catch (Exception exception) {
+			assertEquals("The exception thrown type is IllegalArgumentException", IllegalArgumentException.class,
+					exception.getClass());
+		}
+	}
 
 	// the following tests the method getCumulativePercentages in a case where data passed to it had only positive values
 	// since the documentation gives the range of percentages from 0.0-1.0
@@ -735,7 +788,7 @@ public class DataUtilitiesTest {
 	}
 
 	/* NEW FOR ASSIGNMENT 3 (improve branch coverage)
-	 * This test will test the method clone where both the arguments are empty
+ * This test will test the method clone where both the arguments are empty
 	 * Expected output should be the input, {}
 	 */
 	@Test
@@ -781,6 +834,46 @@ public class DataUtilitiesTest {
 		double[][] actualResult = DataUtilities.clone(input);
 		assertArrayEquals("The output should be", expectedResult, actualResult);
 	}
+	
+	/* NEW FOR ASSIGNMENT 4 (improve branch coverage)
+	 * This test will test the paramchecks in the method clone 
+	 * Expected output should be the input, null
+	 */
+	@Test
+	public void testForNullNotPermitted() {
+		double[][] input = null;
+		try {
+			double[][] actualResult = DataUtilities.clone(input);
+			fail("An exception should be thrown!");
+		} catch (Exception exception) {
+			assertEquals("The exception thrown type is IllegalArgumentException", IllegalArgumentException.class,
+					exception.getClass());
+		}
+	}
+	
+	/* NEW FOR ASSIGNMENT 4
+	 * This test will test the method clone where the argument is multiple row with multiple value
+	 * Expected output should be the input, { }
+	 */
+	@Test
+	public void testForLengthOfZero() {
+		double[][] expectedResult =  { };
+		double[][] input = { };
+		double[][] actualResult = DataUtilities.clone(input);
+		assertArrayEquals("The output should be", expectedResult, actualResult);
+	}
+	
+	/* NEW FOR ASSIGNMENT 4
+	 * This test will test the method clone where the argument is a single row with multiple value
+	 * Expected output should be the input, {{1.0, 2.1, 3.2}}
+	 */
+	@Test
+	public void testForASingleRowWithANullValue() {
+		double[][] expectedResult =  { null };
+		double[][] input = { null };
+		double[][] actualResult = DataUtilities.clone(input);
+		assertArrayEquals("The output should be", expectedResult, actualResult);
+	}
 
 	/* NEW FOR ASSIGNMENT 3 (improve branch coverage)
 	 * This test will test the method equal where first array is null but the second one is not.
@@ -814,7 +907,7 @@ public class DataUtilitiesTest {
 	public void testForBothArraysNull() {
 		double[][] a =  null;
 		double[][] b = null;
-		boolean result = DataUtilities.equal(a, b);
+	boolean result = DataUtilities.equal(a, b);
 		assertTrue(result);
 	}
 
