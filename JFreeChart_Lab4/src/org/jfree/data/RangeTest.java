@@ -7,6 +7,8 @@ import org.junit.*;
 public class RangeTest {
     private Range exampleRange;
     private Range NaNRange;
+    private Range lowerNaNRange;
+    private Range upperNaNRange;
 
     @BeforeClass public static void setUpBeforeClass() throws Exception {
     }
@@ -16,7 +18,29 @@ public class RangeTest {
     public void setUp() throws Exception { 
     	exampleRange = new Range(-1, 1);
     	NaNRange = new Range (Double.NaN, Double.NaN);
+    	lowerNaNRange = new Range (Double.NaN, 2);
+        upperNaNRange = new Range (-2, Double.NaN);
     }
+
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * Test that the constructor will throw an IllegalArgumentException with the right message when the upper bound is less than the lower bound
+     */
+    @Test
+    public void constructorThrowsExceptionWhenValuesAreReversedWithCorrectMessage() {
+		try {
+			Range invalidRange = new Range(5, 2);
+			fail("An exception should be thrown!");
+		} catch (Exception exception) {
+			double upperBound = 2;
+			double lowerBound = 5;
+			String msg = "Range(double, double): require lower (" + lowerBound
+	                + ") <= upper (" + upperBound + ").";
+			assertEquals("The exception msg doesn't contain the right values", msg,
+					exception.getMessage());
+		}
+    }
+
 
     /**
      * NEW FOR ASSIGNMENT 3
@@ -53,6 +77,29 @@ public class RangeTest {
     }
     
     /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the getCentralValue method preservers bounds when called
+     */
+    @Test
+    public void getCentralValueShouldNotAlterValues() {
+    	double temp = exampleRange.getCentralValue();
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+ 	 * This will check that the getCentralValue method returns the correct value    
+ 	 */
+    @Test
+    public void getCentralValueWhenCenterNotEqualZero() {
+    	Range validRange = new Range(2, 5); 
+    	assertEquals("The central value of the Range (2, 5) is 3.5", 3.5, validRange.getCentralValue(), .000000001d);
+
+    }
+    
+    
+    /**
      * NEW FOR ASSIGNMENT 3 (improve statement coverage)
      * This will check that the toString method returns the correct conversion
      */
@@ -60,6 +107,17 @@ public class RangeTest {
     public void toStringValidRange() {
     	String s = "Range[-1.0,1.0]";
     	assertEquals("toString() should convert Range to a String", s, exampleRange.toString());
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the toString method preserves bounds when called
+     */
+    @Test
+    public void toStringValidRangeShouldNotAlterRange() {
+    	String s = exampleRange.toString();
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
     }
     
     /***
@@ -105,6 +163,17 @@ public class RangeTest {
     	exampleRange.intersects(-1, 1));
     }
     
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the intersects method preserves bounds when called
+     */
+    @Test
+    public void intersectsShouldNotAlterValuesLowerLessThanEqArg() {
+    	boolean temp = exampleRange.intersects(-1, 1);
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
+    }
+    
     /***
 	 * This test will test intersects by using a specified range that slightly overlaps with the example range.
 	 * Expected output is True.
@@ -113,6 +182,17 @@ public class RangeTest {
     public void intersectsShouldBeTrueWithPartiallyOverlappingUpperRange() {
     	assertTrue("The Range (-1, 1) intersects the current range (0, 2). Contains should return true",
     	exampleRange.intersects(0, 2));
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the intersects method preserves bounds when called
+     */
+    @Test
+    public void intersectsShouldNotAlterValuesLowerBiggerThanArg() {
+    	boolean temp = exampleRange.intersects(0, 2);
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
     }
     
     /***
@@ -380,6 +460,19 @@ public class RangeTest {
     }
     
     /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the combineIgnoringNaN method preserves bounds when called
+     */
+    @Test
+    public void combineIgnoringNaNShouldNotAlterBounds() {
+    	Range temp = Range.combineIgnoringNaN(exampleRange, null);
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, temp.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, temp.getLowerBound(), .000000001d);
+    }
+    
+    /**
      * NEW FOR ASSIGNMENT 3 (improve branch coverage)
      * This test will check that the combineIgnoringNaN method returns the correct range when the input ranges overlap
      */
@@ -444,6 +537,35 @@ public class RangeTest {
     }
     
     /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the equals method preserves bounds when called
+     */
+    @Test
+    public void equalsShouldNotAlterBoundsDifferentUpperRange() {
+    	Range r2 = new Range(-1, 10);
+    	boolean temp = exampleRange.equals(r2);
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
+    	assertEquals("The upper bound value of the Range (-1, 10) is 10", 10, r2.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 10) is -1", -1, r2.getLowerBound(), .000000001d);
+    }
+    
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the equals method preserves bounds when called
+     */
+    @Test
+    public void equalsShouldNotAlterBoundsDifferentLowerRange() {
+    	Range r2 = new Range(0, 1);
+    	boolean temp = exampleRange.equals(r2);
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
+    	assertEquals("The upper bound value of the Range (0, 1) is 1", 1, r2.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (0, 1) is 0", 0, r2.getLowerBound(), .000000001d);
+    }
+    
+    /**
      * NEW FOR ASSIGNMENT 3 (improve branch coverage)
      * This test will check that expand works as intended when both upper and lower margin are positive
      */
@@ -496,6 +618,33 @@ public class RangeTest {
     }
     
     /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This test will check that scale throws the correct exception when the factor is negative and has absolute val < 1
+     */
+    @Test
+    public void scaleWithSmallNegativeFactor() {
+    	try {
+			Range.scale(exampleRange, -0.1);
+			fail("An exception should be thrown!");
+		} catch (Exception exception) {
+			assertEquals("The exception thrown type is IllegalArgumentException", IllegalArgumentException.class,
+					exception.getClass());
+		}
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This test will check that scale throws the eturns the correct value when the factor is greater than 0 and less than 1
+     */
+    @Test
+    public void scaleWithSmallPositiveFactor() {
+    	Range actual = Range.scale(exampleRange, 0.1);
+
+    	assertEquals("The upper bound should be 0.1", 0.1, actual.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound should be -0.1", -0.1, actual.getLowerBound(), .000000001d);
+    }
+    
+    /**
      * NEW FOR ASSIGNMENT 3 (improve statement coverage)
      * This test will check that constrains returns the exact value when it is contained in the range
      */
@@ -530,6 +679,57 @@ public class RangeTest {
     public void hashCodeReturnsCorrectValue() {
     	assertEquals("The hash code is incorrect", -31457280, exampleRange.hashCode());
     }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the isNaNRange method returns true when range is (NaN, NaN)
+     */
+    @Test
+    public void isNaNRangeBothNaN() {
+    	assertTrue("The range (NaN, NaN)is a NaN range",NaNRange.isNaNRange());
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the isNaNRange method returns true when range is (NaN, 2)
+     */
+    @Test
+    public void isNaNRangeLowerNaN() {
+    	assertFalse("The range (NaN, 2)is a NaN range",lowerNaNRange.isNaNRange());
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the isNaNRange method does not alter the bounds
+     */
+    @Test
+    public void isNaNRangeLowerNaNShouldNotAlterBounds() {
+    	boolean temp = lowerNaNRange.isNaNRange();
+    	assertEquals("The upper bound value of the Range (NaN, 2) is 2", 2, lowerNaNRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (NaN, 2) is NaN", Double.NaN, lowerNaNRange.getLowerBound(), .000000001d);
+    }
+    
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the isNaNRange method returns true when range is (-2, NaN)
+     */
+    @Test
+    public void isNaNRangeUpperNaN() {
+    	assertFalse("The range (-2, NaN)is a NaN range",upperNaNRange.isNaNRange());
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the isNaNRange method does not alter the bounds
+     */
+    @Test
+    public void isNaNRangeUpperNaNShouldNotAlterBounds() {
+    	boolean temp = upperNaNRange.isNaNRange();
+    	assertEquals("The upper bound value of the Range (-2, NaN) is NaN", Double.NaN, upperNaNRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-2, NaN) is -2", -2, upperNaNRange.getLowerBound(), .000000001d);
+    }
+    
 
     @After
     public void tearDown() throws Exception {
