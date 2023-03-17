@@ -166,6 +166,15 @@ public class RangeTest {
     	exampleRange.contains(10));
     }
     
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that contains returns the correct value when choosing a value on the boundary
+     */
+    @Test
+    public void containsShouldBeTrueWithValueOnBoundary() {
+    	assertTrue("The Range(1,1) contains the value 1", smallRange.contains(1));
+    }
+    
     /***
 	 * This test will test intersects by using two ranges that are the same (fully overlapping).
 	 * Expected output is True.
@@ -255,6 +264,33 @@ public class RangeTest {
     @Test
     public void intersectsShouldBeFalseWithb0BelowUpperAndb0GreaterThanb1() {
     	assertFalse("The Range (0, -0.5) does not intersect the current Range (-1, 1)", exampleRange.intersects(0, -0.5));
+    }
+
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that b0 on the lower bound returns the correct value
+     */
+    @Test
+    public void intersectsReturnsTrueWithb0OnLowerBound() {
+    	assertTrue("The Range(1, 2) does intersect the Range(1,1)", smallRange.intersects(1, 2));
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that b1 on the lower bound returns the correct value
+     */
+    @Test
+    public void intersectsReturnsFalseWithb1OnLowerBound() {
+    	assertFalse("The Range (-3,-1) does not intersect (-1,1)", exampleRange.intersects(-3, -1));
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that b0 and b1 on the upper bound returns the correct value
+     */
+    @Test
+    public void intersectsReturnsFalseWithBothOnBounds() {
+    	assertFalse("The Range (1,1) does not intersect (-1,1)", exampleRange.intersects(1,1));
     }
     
     /**
