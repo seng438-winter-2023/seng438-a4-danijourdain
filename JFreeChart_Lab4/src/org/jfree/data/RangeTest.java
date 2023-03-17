@@ -6,6 +6,7 @@ import org.junit.*;
 
 public class RangeTest {
     private Range exampleRange;
+    private Range smallRange;
     private Range NaNRange;
     private Range lowerNaNRange;
     private Range upperNaNRange;
@@ -17,6 +18,7 @@ public class RangeTest {
     @Before
     public void setUp() throws Exception { 
     	exampleRange = new Range(-1, 1);
+    	smallRange = new Range(1, 1);
     	NaNRange = new Range (Double.NaN, Double.NaN);
     	lowerNaNRange = new Range (Double.NaN, 2);
         upperNaNRange = new Range (-2, Double.NaN);
@@ -55,6 +57,17 @@ public class RangeTest {
 			assertEquals("The exception thrown type is IllegalArgumentException", IllegalArgumentException.class,
 					exception.getClass());
 		}
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * Test that the constructor returns the correct values
+     */
+    @Test
+    public void constructorReturnsCorrectObject() {
+    	Range newRange = new Range(3, 10);
+    	assertEquals("The lower bound of the newly created Range should be 3", 3, newRange.getLowerBound(), .000000001d);
+    	assertEquals("The uppper bound of the newly created Range should be 10", 10, newRange.getUpperBound(), .000000001d);	
     }
 
     /***
@@ -587,6 +600,18 @@ public class RangeTest {
 
     	assertEquals("The upper bound should be 2", 2, actual.getUpperBound(), .000000001d);
     	assertEquals("The lower bound should be 2", 2, actual.getLowerBound(), .000000001d);
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that expand will return the same range when both margins are 0
+     */
+    @Test
+    public void expandWithZeroValues() {
+    	Range actual = Range.expand(smallRange, 0, 0);
+
+    	assertEquals("The upper bound should be 1", 1, actual.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound should be 1", 1, actual.getLowerBound(), .000000001d);
     }
     
     /**
