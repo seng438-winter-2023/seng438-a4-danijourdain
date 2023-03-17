@@ -486,6 +486,41 @@ public class RangeTest {
     }
     
     /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the combine method preserves bounds when called and can be combined again
+     */
+    @Test
+    public void combineShouldNotAlterBounds() {
+    	Range r2 = new Range(0, 4);
+    	Range r3 = Range.combine(exampleRange, r2);
+    	Range r4 = Range.combineIgnoringNaN(r3, NaNRange);
+    	assertEquals("The upper bound value of the Range (-1, 1) is 1", 1, exampleRange.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 1) is -1", -1, exampleRange.getLowerBound(), .000000001d);
+    	assertEquals("The upper bound value of the Range (-1, 4) is 4", 4, r3.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 4) is -1", -1, r3.getLowerBound(), .000000001d);
+    	assertEquals("The upper bound value of the Range (-1, 4) is 4", 4, r4.getUpperBound(), .000000001d);
+    	assertEquals("The lower bound value of the Range (-1, 4) is -1", -1, r4.getLowerBound(), .000000001d);
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve Mutation coverage)
+     * This will check that the combine method works with intersects
+     */
+    @Test
+    public void combineShouldWorkWithIntersects() {
+    	Range r2 = new Range(0, 4);
+    	Range r3 = Range.combine(exampleRange, r2);
+    	Range r4 = Range.combineIgnoringNaN(r3, NaNRange);
+    	assertTrue("The range (-1, 1) intersects the r3 range (-1, 4). Contains should return true", exampleRange.intersects(r3));
+    	assertTrue("The range (-1, 1) intersects the r3 range (-1, 4). Contains should return true", exampleRange.intersects(r4));
+    	assertTrue("The r3 range (-1, 4) intersects the r4 range (-1, 4). Contains should return true", r3.intersects(r4));
+    	
+    	assertTrue("The range (-1, 1) intersects the r3 range (-1, 4). Contains should return true", exampleRange.intersects(r3.getLowerBound(), r3.getUpperBound()));
+    	assertTrue("The range (-1, 1) intersects the r3 range (-1, 4). Contains should return true", exampleRange.intersects(r4.getLowerBound(), r4.getUpperBound()));
+    	assertTrue("The r3 range (-1, 4) intersects the r4 range (-1, 4). Contains should return true", r3.intersects(r4.getLowerBound(), r4.getUpperBound()));
+    }
+    
+    /**
      * NEW FOR ASSIGNMENT 3 (improve branch coverage)
      * This test will check that the combineIgnoringNaN method returns the correct range when the input ranges overlap
      */

@@ -970,4 +970,29 @@ public class DataUtilitiesTest {
 		boolean result = DataUtilities.equal(a, b);
 		assertFalse(result);
 	}
+	
+	/***
+	 * NEW FOR ASSIGNMENT 4
+	 * This will test if a cloned array equals itself.
+	 * Expected output is 10
+	 */
+	@Test
+	public void testCloneEqualsOriginal() {
+		double[][] original =  {{1, 2, 3}, {1.1, 2.2, 3.3}};
+		double[][] clone = DataUtilities.clone(original); 
+		assertTrue("The original == the clone", DataUtilities.equal(original, clone));
+	}
+	
+	/***
+	 * NEW FOR ASSIGNMENT 4
+	 * This will test if a cloned array equals a premade array.
+	 * Expected output is 10
+	 */
+	@Test
+	public void testCloneEqualsPremadeValue() {
+		double[][] premade =  {{1, 2, 3}, {1.1, 2.2, 3.3}};
+		double[][] original =  {{1, 2, 3}, {1.1, 2.2, 3.3}};
+		double[][] clone = DataUtilities.clone(original); 
+		assertTrue("The original == the clone", DataUtilities.equal(premade, clone));
+	}
 }
