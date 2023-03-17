@@ -1,0 +1,295 @@
+{
+  "id": "69a0feba-c634-41da-90bd-03b7da7ff8a5",
+  "version": "2.0",
+  "name": "SENG438",
+  "url": "https://www.ikea.com/ca/en/",
+  "tests": [{
+    "id": "5cd10629-adee-49cf-88a5-a089e278e89d",
+    "name": "Search For Item",
+    "commands": [{
+      "id": "34029a48-4b7e-40a7-8307-bc4bfce485cb",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15dfed60-4854-4faa-9155-550a2892534c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd1c0eab-da5a-4836-883e-1eedc7683a22",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-box__visualsearch",
+      "targets": [
+        ["id=search-box__visualsearch", "id"],
+        ["css=#search-box__visualsearch", "css:finder"],
+        ["xpath=//button[@id='search-box__visualsearch']", "xpath:attributes"],
+        ["xpath=//span/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "132591a1-77bc-418e-8f1e-cb0571d30d0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search-btn:nth-child(4) > img",
+      "targets": [
+        ["css=.search-btn:nth-child(4) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/search/visual/visual3.jpg')]", "xpath:img"],
+        ["xpath=//button[4]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94d4601b-cec3-4f4a-b9c5-758107c4c843",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/dvala-duvet-cover-and-pillowcase-s-white__0882453_pe569838_s5.jpg?f=xxs')]", "xpath:img"],
+        ["xpath=//section[@id='product-list']/div/div[3]/div[2]/div/div/a/div/span[2]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/a/div/span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fa6706e-3c15-4173-8cd3-70f480ad7d17",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#pip-media-2 .pip-image",
+      "targets": [
+        ["css=#pip-media-2 .pip-image", "css:finder"],
+        ["xpath=(//img[@alt='DVALA Duvet cover and pillowcase(s), white, King'])[2]", "xpath:img"],
+        ["xpath=//div[@id='pip-media-2']/button/span/img", "xpath:idRelative"],
+        ["xpath=//div[3]/button/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7adc7ce-f01d-49d9-9ae0-b89d3fa1aa3e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#pip-media-2 .pip-image",
+      "targets": [
+        ["css=#pip-media-2 .pip-image", "css:finder"],
+        ["xpath=(//img[@alt='DVALA Duvet cover and pillowcase(s), white, King'])[2]", "xpath:img"],
+        ["xpath=//div[@id='pip-media-2']/button/span/img", "xpath:idRelative"],
+        ["xpath=//div[3]/button/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d9d9c64-f90a-4194-979d-c09c453659b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pip-product__subgrid",
+      "targets": [
+        ["css=.pip-product__subgrid", "css:finder"],
+        ["xpath=//main[@id='content']/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "822e5242-6fd4-4bd1-9365-1e2bfd91adb5",
+    "name": "add items to cart",
+    "commands": [{
+      "id": "e4e87bfd-6330-4ede-84fa-ab65cf970f8a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85338790-8c53-4333-a1ef-0e93769c4711",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed5c2628-6927-450f-9092-8a90a8d6fa26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header-hamburger .hnf-page-container__aside",
+      "targets": [
+        ["css=.hnf-header-hamburger .hnf-page-container__aside", "css:finder"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1472c8c1-d677-4473-92bf-8fc67f47cdaa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc548707-8fb5-47d0-bf88-7ed07ee9a1e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link",
+      "targets": [
+        ["css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Products')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/nav/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a0d3634-000a-42a1-af9b-595a13870cd7",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link",
+      "targets": [
+        ["css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Products')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/nav/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c566b52-18d2-4c7c-8570-7e5db2e7a37c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home décor",
+      "targets": [
+        ["linkText=Home décor", "linkText"],
+        ["css=.hnf-menu__nav2:nth-child(2) > .hnf-menu__nav2__main > li:nth-child(9) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Home décor')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/home-decor-de001/')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home décor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c13675c6-8580-4523-b144-0eef87eb3826",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mirrors",
+      "targets": [
+        ["linkText=Mirrors", "linkText"],
+        ["css=li:nth-child(9) li:nth-child(6) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Mirrors')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/mirrors-20489/')]", "xpath:href"],
+        ["xpath=//li[9]/nav/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mirrors')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05e2b908-32d2-4a6d-b3fc-adbbdbe640e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vn-link:nth-child(2) .hnf-image",
+      "targets": [
+        ["css=.vn-link:nth-child(2) .hnf-image", "css:finder"],
+        ["xpath=//img[@alt='Large mirrors']", "xpath:img"],
+        ["xpath=//a[2]/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66f84564-0eee-497f-8ead-01afafbba8bd",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,200)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03e23594-4950-487e-a5f1-ab22f70815ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-fragment-wrapper:nth-child(1) .pip-aspect-ratio-box:nth-child(3) > .pip-image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(1) .pip-aspect-ratio-box:nth-child(3) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'data:image/gif;base64,R0lGODdhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=')]", "xpath:img"],
+        ["xpath=//span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fb9337f-c7bc-4d6c-92a2-c125c2413274",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#pip-media-2 .pip-image",
+      "targets": [
+        ["css=#pip-media-2 .pip-image", "css:finder"],
+        ["xpath=(//img[@alt='NISSEDAL Mirror, black, 25 5/8x59 \"'])[2]", "xpath:img"],
+        ["xpath=//div[@id='pip-media-2']/button/span/img", "xpath:idRelative"],
+        ["xpath=//div[3]/button/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab717d86-c757-4d6d-86f1-377ae748303a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#pip-media-2 .pip-image",
+      "targets": [
+        ["css=#pip-media-2 .pip-image", "css:finder"],
+        ["xpath=(//img[@alt='NISSEDAL Mirror, black, 25 5/8x59 \"'])[2]", "xpath:img"],
+        ["xpath=//div[@id='pip-media-2']/button/span/img", "xpath:idRelative"],
+        ["xpath=//div[3]/button/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efcb49bf-4aae-4570-a091-e5c44346cf4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pip-desktop-favourite-button-wrapper .pip-btn__inner",
+      "targets": [
+        ["css=.pip-desktop-favourite-button-wrapper .pip-btn__inner", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div/div/div/h1/div/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//h1/div/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6aaddb5-4d38-40be-a8bc-6828e4cdd067",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__shopping-list-link .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-header__shopping-list-link .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "784fdeda-47e6-45e1-8024-28dde4745595",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,98)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d028359-fd5c-4df1-b5d1-ebc3eb713f10",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,660)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93618959-0412-4f00-81a0-01c806029a61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-ingka-btn--small > .list-ingka-btn__inner",
+      "targets": [
+        ["css=.list-ingka-btn--small > .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div/header/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//header/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1dbe133f-f27d-4624-a702-57a4651ca6c1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5cd10629-adee-49cf-88a5-a089e278e89d"]
+  }],
+  "urls": ["https://www.ikea.com/ca/en/"],
+  "plugins": []
+}

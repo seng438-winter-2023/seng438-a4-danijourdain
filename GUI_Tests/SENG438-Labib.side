@@ -1,0 +1,626 @@
+{
+  "id": "5290ce5f-6d4b-4fc1-acc5-29696c44448a",
+  "version": "2.0",
+  "name": "SENG438-Labib",
+  "url": "https://www.ikea.com/ca/en/",
+  "tests": [{
+    "id": "34860658-3f00-40f9-8353-5e67aa483cab",
+    "name": "View Location",
+    "commands": [{
+      "id": "5fc83897-8442-4705-9f33-84f3096dc205",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e4bdb9c-f2e4-4c6e-af33-df691ce2a187",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28eef3a8-fef9-4b91-90a8-abf9a1b6b9c2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.personalised_hej_fragment--card__cta",
+      "targets": [
+        ["css=.personalised_hej_fragment--card__cta", "css:finder"],
+        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "294f19e0-81ae-4f80-a6fc-3ab0a0856755",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.personalised_hej_fragment--card__cta",
+      "targets": [
+        ["css=.personalised_hej_fragment--card__cta", "css:finder"],
+        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4fff871-0842-4fc7-8743-de22084fcd57",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.personalised_hej_fragment--card__info",
+      "targets": [
+        ["css=.personalised_hej_fragment--card__info", "css:finder"],
+        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]", "xpath:idRelative"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb9b52b8-9e64-4f73-a5f0-15124a787f17",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb1a4474-8696-4c92-b6ca-3fbceb096fda",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "396e7ec0-9f39-491f-a4b4-fadd3a491d35",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a178660b-d1db-4471-9b46-1f32d36da256",
+      "comment": "",
+      "command": "click",
+      "target": "css=#hnf-btn-storepicker-switch-store .hnf-btn__label",
+      "targets": [
+        ["css=#hnf-btn-storepicker-switch-store .hnf-btn__label", "css:finder"],
+        ["xpath=//button[@id='hnf-btn-storepicker-switch-store']/span/span", "xpath:idRelative"],
+        ["xpath=//div[5]/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4caa239a-ec0a-4f46-9420-fa92d67a8b82",
+      "comment": "",
+      "command": "click",
+      "target": "css=#hnf-btn-storepicker-method-manual > .hnf-btn__inner",
+      "targets": [
+        ["css=#hnf-btn-storepicker-method-manual > .hnf-btn__inner", "css:finder"],
+        ["xpath=//button[@id='hnf-btn-storepicker-method-manual']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'See full list of stores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9dd8333b-63a5-41f9-b9f5-475da328914d",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(5) strong",
+      "targets": [
+        ["css=li:nth-child(5) strong", "css:finder"],
+        ["xpath=//aside[@id='hnf-storepicker']/div[2]/div[2]/div/div[3]/ul/li[5]/button/div/strong", "xpath:idRelative"],
+        ["xpath=//li[5]/button/div/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'IKEA Edmonton')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03a22d79-1857-442f-a421-67584a1f614d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#hnf-btn-storepicker-visit-store > .hnf-btn__inner",
+      "targets": [
+        ["css=#hnf-btn-storepicker-visit-store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//a[@id='hnf-btn-storepicker-visit-store']/span", "xpath:idRelative"],
+        ["xpath=//div[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Visit store page')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "042c884b-3e0d-4ac0-8540-a85fe0350092",
+    "name": "Add Item to Cart Multiple Times",
+    "commands": [{
+      "id": "d9ee89df-fd20-47a0-8d99-f4d35fb34450",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4ce5723-c8f3-4ff8-9bb7-34dfd1a0e1e2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7680f9ba-eda1-4e20-bafc-5a9eda898ad8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71afc553-4fc2-4464-9383-e075f0ec9438",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link",
+      "targets": [
+        ["css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Products')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/nav/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89a6354a-830e-4876-82f1-0fb560ea7478",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All furniture",
+      "targets": [
+        ["linkText=All furniture", "linkText"],
+        ["css=.hnf-menu__nav2:nth-child(2) > .hnf-menu__nav2__main > li:nth-child(6) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'All furniture')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/all-furniture-fu001/')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All furniture')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9841df7d-9c77-4fd4-8a58-bbad828a2c6f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Gaming furniture",
+      "targets": [
+        ["linkText=Gaming furniture", "linkText"],
+        ["css=li:nth-child(6) li:nth-child(3) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Gaming furniture')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/gaming-furniture-55002/')]", "xpath:href"],
+        ["xpath=//li[6]/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gaming furniture')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41d8a3cd-456c-4ce4-be6d-78c5b8a8bfc3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.vn-link:nth-child(3) > .vn__nav__title",
+      "targets": [
+        ["css=.vn-link:nth-child(3) > .vn__nav__title", "css:finder"],
+        ["xpath=//a[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Gaming accessories')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dfc2b2d-e9f2-45f9-8e52-cad1f2d5b11d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.vn-link:nth-child(3) > .vn__nav__title",
+      "targets": [
+        ["css=.vn-link:nth-child(3) > .vn__nav__title", "css:finder"],
+        ["xpath=//a[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Gaming accessories')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc708868-a724-4938-989f-1c09839329fb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.vn-link:nth-child(3) .hnf-image",
+      "targets": [
+        ["css=.vn-link:nth-child(3) .hnf-image", "css:finder"],
+        ["xpath=//img[@alt='Gaming accessories']", "xpath:img"],
+        ["xpath=//a[3]/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7afc95e-5d59-4e2e-8a1f-c69a31af1ed8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vn-link:nth-child(3) .hnf-image",
+      "targets": [
+        ["css=.vn-link:nth-child(3) .hnf-image", "css:finder"],
+        ["xpath=//img[@alt='Gaming accessories']", "xpath:img"],
+        ["xpath=//a[3]/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e91e671-5588-4f3f-b6c9-90bd5eafe824",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
+        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODdhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=')])[3]", "xpath:img"],
+        ["xpath=//div[3]/div[2]/div/div/a/div/span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c34a0a0d-06ec-49ec-91e6-8ab873eb77a8",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,49)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc47dec9-58c5-4754-9a4a-f13a35c98d4d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/lanespelare-gaming-mouse-pad-patterned__1159511_pe888522_s5.jpg?f=xxs')]", "xpath:img"],
+        ["xpath=//div[3]/div[2]/div/div/a/div/span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9dc6eeb4-3393-4338-83a8-9fa708a50108",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/lanespelare-gaming-mouse-pad-patterned__1159511_pe888522_s5.jpg?f=xxs')]", "xpath:img"],
+        ["xpath=//div[3]/div[2]/div/div/a/div/span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0fb64a6-a032-4524-a048-b52824339464",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pip-btn--fluid .pip-btn__label",
+      "targets": [
+        ["css=.pip-btn--fluid .pip-btn__label", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div[4]/div/div/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "672f0223-8403-4ca8-a7d4-b1eb67716ce2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pip-btn__label:nth-child(2)",
+      "targets": [
+        ["css=.pip-btn__label:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div[4]/div/div/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6886d51b-8eb2-4e84-a9de-9e3f44fcfe82",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.pip-btn__label:nth-child(2)",
+      "targets": [
+        ["css=.pip-btn__label:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div[4]/div/div/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0dc406e-0db5-48f7-b8a7-a7e6779abaf9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec-btn--icon-primary-inverse > .rec-btn__inner",
+      "targets": [
+        ["css=.rec-btn--icon-primary-inverse > .rec-btn__inner", "css:finder"],
+        ["xpath=//div[3]/div/div/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3e2fd24-da5e-4432-8d36-fe0c966fecca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__logo img",
+      "targets": [
+        ["css=.hnf-header__logo img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/static/ikea-logo.f7d9229f806b59ec64cb.svg')]", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6835be95-4351-434c-85ed-165f4594676d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-header__logo img",
+      "targets": [
+        ["css=.hnf-header__logo img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/static/ikea-logo.f7d9229f806b59ec64cb.svg')]", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d6d6ebf-e4d4-4027-8f49-2f28aea11b2c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Products",
+      "targets": [
+        ["linkText=Products", "linkText"],
+        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
+        ["xpath=//nav/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c0c1cab-97f2-4a39-96cb-c73bf939aebf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Products",
+      "targets": [
+        ["linkText=Products", "linkText"],
+        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
+        ["xpath=//nav/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d36122b-4539-4a33-a325-db351824c95f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Products",
+      "targets": [
+        ["linkText=Products", "linkText"],
+        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
+        ["xpath=//nav/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8854d359-dbdc-4be3-8528-f1cbd9d0f93a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All furniture",
+      "targets": [
+        ["linkText=All furniture", "linkText"],
+        ["css=.hnf-menu__nav2:nth-child(2) > .hnf-menu__nav2__main > li:nth-child(6) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'All furniture')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/all-furniture-fu001/')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All furniture')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdb9d349-ed7d-41e8-beff-d5e3c6eb8851",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Gaming furniture",
+      "targets": [
+        ["linkText=Gaming furniture", "linkText"],
+        ["css=li:nth-child(6) li:nth-child(3) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Gaming furniture')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/gaming-furniture-55002/')]", "xpath:href"],
+        ["xpath=//li[6]/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gaming furniture')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0666e6a6-2ed4-4af6-b930-2d68d4ad14c0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.vn-link:nth-child(4) > .vn__nav__title",
+      "targets": [
+        ["css=.vn-link:nth-child(4) > .vn__nav__title", "css:finder"],
+        ["xpath=//a[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Gaming desk & chair sets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "332793cc-5b9a-4766-a80d-2125a225d31a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.vn-link:nth-child(4) > .vn__nav__title",
+      "targets": [
+        ["css=.vn-link:nth-child(4) > .vn__nav__title", "css:finder"],
+        ["xpath=//a[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Gaming desk & chair sets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a36f24d-4b10-4719-af85-537935febedb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.vn-link:nth-child(3) .hnf-image",
+      "targets": [
+        ["css=.vn-link:nth-child(3) .hnf-image", "css:finder"],
+        ["xpath=//img[@alt='Gaming accessories']", "xpath:img"],
+        ["xpath=//a[3]/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00daf397-67ee-4c80-833d-53d00eeb3c5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image",
+      "targets": [
+        ["css=.plp-fragment-wrapper:nth-child(3) .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/lanespelare-gaming-mouse-pad-patterned__1159511_pe888522_s5.jpg?f=xxs')]", "xpath:img"],
+        ["xpath=//div[3]/div[2]/div/div/a/div/span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67e24aac-82fd-4da5-9073-00fdf5c85eb1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pip-link-button:nth-child(1)",
+      "targets": [
+        ["css=.pip-link-button:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div[3]/div[2]/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Locate product in store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a60d8bd-db6d-4c75-b15e-ddb66551352d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pip-btn--fluid > .pip-btn__inner",
+      "targets": [
+        ["css=.pip-btn--fluid > .pip-btn__inner", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div[4]/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f99fa75-8924-48fe-896a-bf80f913aa23",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pip-btn--fluid .pip-btn__label",
+      "targets": [
+        ["css=.pip-btn--fluid .pip-btn__label", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div[4]/div/div/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62b5b6b1-a5e7-486d-8718-3a44b0ae9b04",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(3) > div > .pip-product-compact .pip-aspect-ratio-box:nth-child(2) > .pip-image",
+      "targets": [
+        ["css=div:nth-child(3) > div > .pip-product-compact .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/uppspel-cpu-stand-with-castors-dark-gray__1043079_pe841667_s5.jpg?f=xxs')]", "xpath:img"],
+        ["xpath=//div[3]/div/div/a/div/div/span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6cb973e-ad3d-4522-aa81-b7e45f7ef66b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=div:nth-child(3) > div > .pip-product-compact .pip-aspect-ratio-box:nth-child(2) > .pip-image",
+      "targets": [
+        ["css=div:nth-child(3) > div > .pip-product-compact .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/uppspel-cpu-stand-with-castors-dark-gray__1043079_pe841667_s5.jpg?f=xxs')]", "xpath:img"],
+        ["xpath=//div[3]/div/div/a/div/div/span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "541c5efa-39f1-46db-9fb1-4205758f86a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec-btn--icon-primary-inverse > .rec-btn__inner",
+      "targets": [
+        ["css=.rec-btn--icon-primary-inverse > .rec-btn__inner", "css:finder"],
+        ["xpath=//div[3]/div/div/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "262b1499-0e09-4ff6-8c59-b2052c321541",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__logo img",
+      "targets": [
+        ["css=.hnf-header__logo img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/static/ikea-logo.f7d9229f806b59ec64cb.svg')]", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73a6abc8-ea6d-42d9-9645-231ab5664052",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-shopping-cart-icon",
+      "targets": [
+        ["css=.js-shopping-cart-icon", "css:finder"],
+        ["xpath=//li[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1bf6576-1f6d-4a39-864a-de7a456a8cda",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-header__shopping-list-link .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-header__shopping-list-link .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b7def2c-fff4-4c6d-bb67-ff8890984f75",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-header__shopping-list-link .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-header__shopping-list-link .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc8051d4-a623-4b9a-8d5c-56ead097fcff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Remove product",
+      "targets": [
+        ["linkText=Remove product", "linkText"],
+        ["css=.productControlsWithStepper_remove__qkMpH > .cart-ingka-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Remove product')]", "xpath:link"],
+        ["xpath=//a[@type='tertiary']", "xpath:attributes"],
+        ["xpath=//main[@id='one-checkout']/main/div/div/div/div[21]/div[5]/div/div/div[2]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Remove product')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6731b89-af9b-429b-8ac8-55b9f828d233",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "281d78d9-1a1c-469f-b6d2-d659304ef86c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__logo img",
+      "targets": [
+        ["css=.hnf-header__logo img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/static/ikea-logo.f7d9229f806b59ec64cb.svg')]", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ff1e3067-c2c6-4a55-b09d-d2e98e88883b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["34860658-3f00-40f9-8353-5e67aa483cab"]
+  }],
+  "urls": ["https://www.ikea.com/ca/en/"],
+  "plugins": []
+}

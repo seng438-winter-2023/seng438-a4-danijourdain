@@ -1,0 +1,340 @@
+{
+  "id": "699ea235-47da-41ea-bf02-02de2a31beb1",
+  "version": "2.0",
+  "name": "SENG438_A4_IKEA_Test",
+  "url": "https://www.ikea.com/ca/en/",
+  "tests": [{
+    "id": "d1fc145c-6847-45ab-b105-c8f7d63c7b88",
+    "name": "AddWishListAndRenameIt",
+    "commands": [{
+      "id": "94e7ab13-6a11-407b-b77a-f08e73cd8c99",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e553cf90-5eb5-4dd6-a685-f5437fe5e39e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ccc79cf-47d2-47f3-b73b-ab39cc930fa5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__shopping-list-link .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-header__shopping-list-link .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6376877e-33e9-4ad8-b971-e30a9c47072b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-ingka-leading-icon > .list-ingka-btn__inner",
+      "targets": [
+        ["css=.list-ingka-leading-icon > .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d66b965-99eb-494a-a29e-abfd7385d900",
+      "comment": "",
+      "command": "type",
+      "target": "id=new-list-form-input",
+      "targets": [
+        ["id=new-list-form-input", "id"],
+        ["css=#new-list-form-input", "css:finder"],
+        ["xpath=//input[@id='new-list-form-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "New Wish List"
+    }, {
+      "id": "b9c7eaa8-14f3-4f14-9b4d-e1b40abafadf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.NewListForm_buttonContainer__14Zz8 > .list-ingka-btn:nth-child(1) .list-ingka-svg-icon",
+      "targets": [
+        ["css=.NewListForm_buttonContainer__14Zz8 > .list-ingka-btn:nth-child(1) .list-ingka-svg-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d5c35cd-0f00-45d4-80a9-9a4fbc1cfd06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.SelectListItem_container__2JkUZ:nth-child(3) .list-ingka-btn__inner",
+      "targets": [
+        ["css=.SelectListItem_container__2JkUZ:nth-child(3) .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div[3]/header/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/header/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f243147-7e56-4760-974d-b316c5ba6a07",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.SelectListItem_container__2JkUZ:nth-child(3) .list-ingka-btn__inner",
+      "targets": [
+        ["css=.SelectListItem_container__2JkUZ:nth-child(3) .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div[3]/header/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/header/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d9701b3-7e5e-4fb7-a80a-9b2b92ec4a22",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.SelectListItem_container__2JkUZ:nth-child(3) .list-ingka-btn__inner",
+      "targets": [
+        ["css=.SelectListItem_container__2JkUZ:nth-child(3) .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div[3]/header/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/header/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94741bb4-8998-418b-8acc-372452659e4e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#list-ingka-context-menu-actions-1 > .list-ingka-action-list-item__action",
+      "targets": [
+        ["css=#list-ingka-context-menu-actions-1 > .list-ingka-action-list-item__action", "css:finder"],
+        ["xpath=//li[@id='list-ingka-context-menu-actions-1']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/ul/li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Rename')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e12feb4-a69e-4954-b05f-c8316bfce2a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rename-list",
+      "targets": [
+        ["css=.rename-list", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60d92653-4c64-477c-930a-b4ab016b9e1b",
+      "comment": "",
+      "command": "type",
+      "target": "id=rename-list-input",
+      "targets": [
+        ["id=rename-list-input", "id"],
+        ["css=#rename-list-input", "css:finder"],
+        ["xpath=//input[@id='rename-list-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div[5]/div[4]/div/div[2]/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "NewName"
+    }, {
+      "id": "76b1ffb4-3d03-4781-ba58-281b7c301abc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-ingka-btn--fluid > .list-ingka-btn__inner",
+      "targets": [
+        ["css=.list-ingka-btn--fluid > .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div[5]/div[4]/div/div[3]/button/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Okay')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37c25a54-0246-4683-8b20-749df6a3dfbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.SelectListItem_container__2JkUZ:nth-child(4) .list-ingka-btn__inner",
+      "targets": [
+        ["css=.SelectListItem_container__2JkUZ:nth-child(4) .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div[4]/header/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[4]/header/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9b3453d-60d5-49e6-95ea-6e60bf031827",
+      "comment": "",
+      "command": "click",
+      "target": "css=#list-ingka-context-menu-actions-4 > .list-ingka-action-list-item__action",
+      "targets": [
+        ["css=#list-ingka-context-menu-actions-4 > .list-ingka-action-list-item__action", "css:finder"],
+        ["xpath=//li[@id='list-ingka-context-menu-actions-4']/button", "xpath:idRelative"],
+        ["xpath=//li[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete this wish list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "414ba869-4a49-49e1-a8f1-b14e6843e929",
+    "name": "SearchForItem",
+    "commands": [{
+      "id": "539f7729-eca4-4bb0-9073-882c5acc6d82",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31f91360-1a43-447a-8fa3-05c2ef78b2ca",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "786x817",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eba4be60-591a-4968-bb4f-1ce54120c61c",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e4f144e-dc49-47df-a89c-f2e394652b5d",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Nissedal"
+    }, {
+      "id": "03b0f210-c416-41d8-8fb2-a2b69f3f82ec",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e7861197-2289-436b-b028-2d18cf3aa0c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-product-list__products > .plp-fragment-wrapper:nth-child(1) .pip-aspect-ratio-box:nth-child(3) > .pip-image",
+      "targets": [
+        ["css=.plp-product-list__products > .plp-fragment-wrapper:nth-child(1) .pip-aspect-ratio-box:nth-child(3) > .pip-image", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/nissedal-mirror-black__0459450_pe606152_s5.jpg?f=xxs')]", "xpath:img"],
+        ["xpath=//section[@id='product-list']/div/div/div[2]/div/div/a/div/span[2]/img", "xpath:idRelative"],
+        ["xpath=//span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46642711-5b0b-47d1-a3ae-70b24cccf143",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,998)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75e0da77-3b00-4b8c-bf6f-b6863879d278",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pip-btn--fluid > .pip-btn__inner",
+      "targets": [
+        ["css=.pip-btn--fluid > .pip-btn__inner", "css:finder"],
+        ["xpath=//div[@id='pip-buy-module-content']/div[5]/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1e5e1e4-3e33-4774-b72c-192b804d20d0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64d80cb7-d324-4f1b-a092-2a72f85c9a43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec-btn--icon-primary-inverse > .rec-btn__inner",
+      "targets": [
+        ["css=.rec-btn--icon-primary-inverse > .rec-btn__inner", "css:finder"],
+        ["xpath=//div[3]/div/div/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ca55b6fa-9eda-47c8-a780-8acc9cb539db",
+    "name": "SearchForInvalidItem",
+    "commands": [{
+      "id": "d850604a-c138-4c8a-8ced-474480b0a30f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76aa59b8-0b18-4251-8432-524aa011db73",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5eaf9da-d74f-4d64-b61a-5372a9ff1b4a",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1dac74d-8a82-4666-9683-5780a2d8d182",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "213dsaf651sdf31a"
+    }, {
+      "id": "0cfc23be-1cca-4edb-9e44-4062b0e9df20",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "f2661315-1971-453f-9e6f-b4b47ac484e5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d1fc145c-6847-45ab-b105-c8f7d63c7b88"]
+  }],
+  "urls": ["https://www.ikea.com/", "https://www.ikea.com/ca/en/"],
+  "plugins": []
+}
