@@ -135,7 +135,7 @@
       ],
       "value": "NewName"
     }, {
-      "id": "76b1ffb4-3d03-4781-ba58-281b7c301abc",
+      "id": "7ce8578e-e7a2-492e-8037-c96606f2fa8d",
       "comment": "",
       "command": "click",
       "target": "css=.list-ingka-btn--fluid > .list-ingka-btn__inner",
@@ -147,26 +147,30 @@
       ],
       "value": ""
     }, {
-      "id": "37c25a54-0246-4683-8b20-749df6a3dfbf",
+      "id": "65baf5ed-55be-46a6-adf4-d48c754467f7",
       "comment": "",
       "command": "click",
-      "target": "css=.SelectListItem_container__2JkUZ:nth-child(4) .list-ingka-btn__inner",
+      "target": "linkText=NewName",
       "targets": [
-        ["css=.SelectListItem_container__2JkUZ:nth-child(4) .list-ingka-btn__inner", "css:finder"],
-        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div[4]/header/div[2]/button/span", "xpath:idRelative"],
-        ["xpath=//div[4]/header/div[2]/button/span", "xpath:position"]
+        ["linkText=NewName", "linkText"],
+        ["css=.SelectListItem_container__2JkUZ:nth-child(3) .ListHeader_listName__3wNZq", "css:finder"],
+        ["xpath=//a[contains(text(),'NewName')]", "xpath:link"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div[3]/header/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ca/en/favourites/0559349c-8f3f-496a-abfc-f696aca6e734/retail')]", "xpath:href"],
+        ["xpath=//div[3]/header/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'NewName')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "e9b3453d-60d5-49e6-95ea-6e60bf031827",
+      "id": "a11d080b-1c00-40e9-af88-e0a174d132b7",
       "comment": "",
-      "command": "click",
-      "target": "css=#list-ingka-context-menu-actions-4 > .list-ingka-action-list-item__action",
+      "command": "verifyElementPresent",
+      "target": "css=.ListAdmin_listName__3FdcK",
       "targets": [
-        ["css=#list-ingka-context-menu-actions-4 > .list-ingka-action-list-item__action", "css:finder"],
-        ["xpath=//li[@id='list-ingka-context-menu-actions-4']/button", "xpath:idRelative"],
-        ["xpath=//li[3]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Delete this wish list')]", "xpath:innerText"]
+        ["css=.ListAdmin_listName__3FdcK", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/header/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'NewName is empty!')]", "xpath:innerText"]
       ],
       "value": ""
     }]
@@ -271,6 +275,28 @@
         ["xpath=//div[3]/div/div/div/div/button/span", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "b06642e7-09a0-401f-b13c-29ff94a8e0e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-shopping-cart-icon",
+      "targets": [
+        ["css=.js-shopping-cart-icon", "css:finder"],
+        ["xpath=//li[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a05a78e4-70dd-41ce-a107-891d00839e74",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.product_imageContainer__4XKi8 > img",
+      "targets": [
+        ["css=.product_imageContainer__4XKi8 > img", "css:finder"],
+        ["xpath=//img[@alt='IKEA NISSEDAL ART']", "xpath:img"],
+        ["xpath=//main[@id='one-checkout']/main/div/div/div/div[21]/div[5]/div/div/div/div/img", "xpath:idRelative"],
+        ["xpath=//div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "ca55b6fa-9eda-47c8-a780-8acc9cb539db",
@@ -325,6 +351,18 @@
         ["xpath=//input", "xpath:position"]
       ],
       "value": "${KEY_ENTER}"
+    }, {
+      "id": "680fe2ea-8b8f-4be0-88bf-c4d07203ea84",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.search-summary__heading",
+      "targets": [
+        ["css=.search-summary__heading", "css:finder"],
+        ["xpath=//main[@id='content']/div/div/div/section/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'There are no results for \"213dsaf651sdf31a\"')]", "xpath:innerText"]
+      ],
+      "value": ""
     }]
   }],
   "suites": [{
