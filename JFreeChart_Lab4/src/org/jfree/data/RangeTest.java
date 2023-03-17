@@ -663,7 +663,51 @@ public class RangeTest {
     }
     
     /**
-     * NEW FOR ASSIGNMENT 3 (improve statement coverage)
+     * NEW FOR ASSIGNMENT 4
+     * This test will check to see if the constraint works with a value being added to
+     */
+    @Test
+    public void constrainValueBeingAddedTo() {
+    	double entered = 0;
+    	exampleRange = Range.expand(exampleRange, 2, 2);
+    	assertEquals("The closest value in the range to 0 is 0", 0, exampleRange.constrain(entered ++), .000000001d);
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check to see if the constraint works with a value being subtracted from
+     */
+    @Test
+    public void constrainValueBeingSubtractedFrom() {
+    	double entered = 0;
+    	exampleRange = Range.expand(exampleRange, 2, 2);
+    	assertEquals("The closest value in the range to 0 is 0", 0, exampleRange.constrain(entered --), .000000001d);
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check to see if the constraint works with a value being added to Beforehand
+     */
+    @Test
+    public void constrainValueBeingAddedToBeforehand() {
+    	double entered = 0;
+    	exampleRange = Range.expand(exampleRange, 2, 2);
+    	assertEquals("The closest value in the range to 1 is 1", 1, exampleRange.constrain(++ entered), .000000001d);
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check to see if the constraint works with a value being subtracted from Beforehand
+     */
+    @Test
+    public void constrainValueBeingSubtractedFromBeforehand() {
+    	double entered = 0;
+    	exampleRange = Range.expand(exampleRange, 2, 2);
+    	assertEquals("The closest value in the range to -1 is -1", -1, exampleRange.constrain(-- entered), .000000001d);
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4 (improve mutation coverage)
      * This test will check that the lower bound is returned when the input is below the lower bound of the range
      */
     @Test
