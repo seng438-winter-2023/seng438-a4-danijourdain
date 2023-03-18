@@ -294,6 +294,17 @@ public class RangeTest {
     }
     
     /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that intersects returns the correct value when the upper bound is on the
+     * lower bound of the existing range
+     */
+    @Test
+    public void intersectsReturnsFalseWithValueOnLowerBound() {
+    	Range r2 = new Range(-1, 5);
+    	assertFalse("The Range(-1, 5) does not intersect (-2, -1)", r2.intersects(-2, -1));
+    }
+    
+    /**
      * NEW FOR ASSIGNMENT 3 (increase statement coverage)
      * This test will check that intersects is correct when the ranges overlap
      */
@@ -301,6 +312,15 @@ public class RangeTest {
     public void intersectsWithAnotherRange() {
     	Range r2 = new Range (0, 7);
     	assertTrue("The ranges (-1, 1) and (0, 7) intersect", exampleRange.intersects(r2));
+    }
+    
+    /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that intersects returns the correct value when the ranges do not intersect
+     */
+    @Test
+    public void intersectsIsFalseWithAnotherRange() {
+    	assertFalse("The Ranges (-1,1) and (1,1) do not overlap", exampleRange.intersects(smallRange));
     }
     
     /***
@@ -750,6 +770,16 @@ public class RangeTest {
     }
     
     /**
+     * NEW FOR ASSIGNMENT 4
+     * This test will check that constrains returns the correct value when calling it for values just outside of the range
+     */
+    @Test
+    public void constrainForBoundaryValues() {
+    	assertEquals("The range contains value 1", 1, exampleRange.constrain(2), .000000001d);
+    	assertEquals("The range contains value -1", -1, exampleRange.constrain(-2), .000000001d);
+    }
+    
+    /**
      * NEW FOR ASSIGNMENT 3 (improve statement coverage)
      * This test will check that the upper bound is returned when the input is above the upper bound of the range
      */
@@ -809,6 +839,11 @@ public class RangeTest {
     @Test
     public void constrainValueBelowRange() {
     	assertEquals("The closest value in the range to -2.3 is -1", -1, exampleRange.constrain(-2.3), .000000001d);
+    }
+    
+    @Test
+    public void constrainWithValueGreaterThanNegativeLowerRange() {
+    	assertEquals("The closest value in the range to 0 is 1", 1, smallRange.constrain(0), .000000001d);
     }
     
     /**
